@@ -47,7 +47,7 @@ class ImageCracker:
                     raise
             try:
                 if external:
-                    print(f'Downloading {link}')
+                    print('Downloading')
                     bytes_content = requests.get(link).content
                 else:
                     print(f'Downloading {self.IMAGE_BASE_URL + link}')
@@ -70,6 +70,4 @@ class ImageCracker:
         else:
             self.get_image_links(img_type)
         self.make_dirs_and_download_images(external)
-
-
 
